@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/XGeoAI_Pollution_Analyst" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

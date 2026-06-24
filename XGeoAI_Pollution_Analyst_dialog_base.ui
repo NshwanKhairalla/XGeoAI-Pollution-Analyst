@@ -1,0 +1,3648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XGeoAIPollutionAnalystDialogBase</class>
+ <widget class="QDialog" name="XGeoAIPollutionAnalystDialogBase">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>785</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1060</width>
+    <height>785</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1000</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>XGeoAI Pollution Analyst</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QTabWidget" name="tabsXgeoAi">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>9</y>
+     <width>1031</width>
+     <height>750</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>750</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1035</width>
+     <height>760</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>1</width>
+     <height>1</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>1035</width>
+     <height>760</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="tabBarAutoHide">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tHelpInstructions">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>973</width>
+      <height>697</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Help and Instructions</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>1011</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLHelpInstructions">
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pBBegintheanalysis">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Begin The Analysis</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Begin.svg</normaloff>Icons/Begin.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTextEdit" name="tEHelpInstructions"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tDataImport">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>973</width>
+      <height>697</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Data Import</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>991</width>
+       <height>248</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLDataImport">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="lDataSourceSelection">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>1</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Data source Selection:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lPollutantDataType">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pollutant Dataset:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lLandUseData">
+        <property name="text">
+         <string>Land Use Dataset:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" alignment="Qt::AlignRight">
+       <widget class="QPushButton" name="pBDataImportNext">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QListWidget" name="lWLandUseData">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QListWidget" name="lWPollutantDataType">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tDataPreparation">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Data Preparation</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>991</width>
+       <height>629</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLDataPreparation" columnstretch="0,0,0">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item row="12" column="0">
+       <widget class="QLabel" name="lInterpolationDataPreparation">
+        <property name="text">
+         <string>Interpolation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="lProgressbarDataPreparation">
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="1">
+       <widget class="QCheckBox" name="cBEnableManualBaseDate">
+        <property name="text">
+         <string>Enable Manual Base Date</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="lTimeSeriesLayerDataPreparation">
+        <property name="text">
+         <string>Time-Series Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lTargetCRSPollutantLayer">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Target CRS Pollutant Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="lResampleTemporalResolutionDataPreparation">
+        <property name="text">
+         <string>Resample Temporal Resolution:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="lAlignWithLayerDataPreparation">
+        <property name="text">
+         <string>Temporal Resampling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1" colspan="2">
+       <widget class="QComboBox" name="cBInterpolationDataPreparation"/>
+      </item>
+      <item row="10" column="1" colspan="2">
+       <widget class="QComboBox" name="cBTimeFieldDataPreparation"/>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lInputPollutantLayer">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Pollutant Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1" colspan="2">
+       <widget class="QComboBox" name="cBTimeSeriesLayerDataPreparation"/>
+      </item>
+      <item row="4" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lTargetCRSLandUseLayer">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Target CRS Land Use Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lInputLandUseLayer">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Land Use Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lEnableTemporalAlignment">
+        <property name="text">
+         <string>Enable Temporal Resampling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="2">
+       <widget class="QDateEdit" name="dEBaseDateTemporalAlignment"/>
+      </item>
+      <item row="11" column="1" colspan="2">
+       <widget class="QComboBox" name="cBResampleTemporalResoultionDataPreparation"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="pBDataPreparationCRSConversion">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>CRS Conversion</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="lCRSConfiguration">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>CRS Configuration:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="lTimeFieldDataPreparation">
+        <property name="text">
+         <string>Time Field:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lTemporalAlignmentDataPreparation">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Temporal Resampling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="lBaseDateTemporalAlginment">
+        <property name="text">
+         <string>Base Date:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1" colspan="2">
+       <widget class="QProgressBar" name="pBDataPreparation">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1" colspan="2">
+       <widget class="QPushButton" name="pBNextDataPreparation">
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1" colspan="2">
+       <widget class="QPushButton" name="pBSyncTimestampsDataPreparation">
+        <property name="text">
+         <string>Sync Timestamps</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QCheckBox" name="cBEnableTemporalAlignment">
+        <property name="text">
+         <string>Enable</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QComboBox" name="cBTargetCRSLandUseLayer">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QListWidget" name="lWInputLandUseLayer">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QComboBox" name="cBTargetCRSPollutantLayer">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QListWidget" name="lWInputPolluatantLayer">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tDataSpatialRefinement">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>993</width>
+      <height>720</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Data Spatial Refinement</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>991</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLDataRefinement">
+      <item row="17" column="0">
+       <widget class="QLabel" name="lChooseFolderDataRefinementCSVSaveVectorAlign">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder for Vector Interpolation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lTargetResolustionMeters">
+        <property name="text">
+         <string>Target Resolution (meters):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lAligntoReferenceRaster">
+        <property name="text">
+         <string>Align to Reference Raster:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="3">
+       <widget class="QPushButton" name="pBConvertDataCSV">
+        <property name="text">
+         <string>Convert Data to CSV</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/ConvertCSV.svg</normaloff>Icons/ConvertCSV.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QToolButton" name="tBChooseFolderDataRefinementClipPollutantLayer">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1" colspan="4">
+       <widget class="QListWidget" name="lWInputPollutantVectorAlign">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="lInputPollutantVectorAlign">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Pollutant Vector:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lGridResampling">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Grid Resampling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="1">
+       <widget class="QToolButton" name="tBChooseFolderDataRefinementCSVSave">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="4">
+       <widget class="QPushButton" name="pBRefreshAlgin">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="4">
+       <widget class="QPushButton" name="pBConvertPollutantLayertoVector">
+        <property name="text">
+         <string>Vectorize Pollutant Layer</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QLabel" name="lProgressDataRefinement">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="1">
+       <widget class="QToolButton" name="tBChooseFolderDataRefinementCSVSaveVectorAlign">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="4">
+       <widget class="QListWidget" name="lWInputPollutantRasterClip">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="4">
+       <widget class="QListWidget" name="lWInputLandUseVectorClip">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lInputLandUseVectorClip">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Land Use Vector:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lInputPollutantRasterClip">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Pollutant Raster:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1" colspan="4">
+       <widget class="QListWidget" name="lWInputLandUseVectorAlign">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="0">
+       <widget class="QLabel" name="lChooseFolderDataRefinementCSVSave">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder for CSV:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QPushButton" name="pBClipPollutantLayer">
+        <property name="text">
+         <string>Clip Pollutant Layer</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="lVectorAlignment">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Vector Interpolation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="4">
+       <widget class="QPushButton" name="pBDataRefinementNext">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QPushButton" name="pBRefreshClip">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lCliptoStudyArea">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Clip to Study Area:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="4">
+       <widget class="QPushButton" name="pBVectorAlign">
+        <property name="text">
+         <string>Vector Interpolation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lChooseFolderDataRefinementClipPollutantLayer">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder for Pollutant Clipped Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="lInputLandUseVectorAlign">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Input Land Use Vector:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="lChooseFolderGridResampling">
+        <property name="text">
+         <string>Choose a Folder for Pollutant Raster Resampled:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="2">
+       <widget class="QCheckBox" name="cBEnableVectorAlignment">
+        <property name="text">
+         <string>Enable Vector Interpolation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="lGridResamplingMethod">
+        <property name="text">
+         <string>Resampling Method:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="lChooseFolderDataRefinementVectorPollutantLayer">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder for Pollutant Vector Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="1" colspan="4">
+       <widget class="QProgressBar" name="pBDataRefinement">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1">
+       <widget class="QToolButton" name="tBChooseFolderDataRefinementVectorPollutantLayer">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="lEnableVectorAlignment">
+        <property name="text">
+         <string>Enable Vector Interpolation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="lVictorization">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Vectorization of Pollutant Raster:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QToolButton" name="tBChooseFolderGridResampling">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QPushButton" name="pBGridResampling">
+        <property name="text">
+         <string>Grid Resampling</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QCheckBox" name="cBEnableGridResampling">
+        <property name="text">
+         <string>Enable Grid Resampling</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1" colspan="4">
+       <widget class="QComboBox" name="cBGridResamplingMethod"/>
+      </item>
+      <item row="6" column="3" colspan="2">
+       <widget class="QLineEdit" name="lETargetResolutionGridResampling"/>
+      </item>
+      <item row="7" column="3" colspan="2">
+       <widget class="QComboBox" name="cBAligntoReferenceRaster"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QRadioButton" name="rBTargetResolutionGridResampling">
+        <property name="text">
+         <string>Target Resolution</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QRadioButton" name="rBRefernceRasterGridResampling">
+        <property name="text">
+         <string>Reference Raster</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tDataQualityCleaning">
+    <attribute name="title">
+     <string>Data Quality Cleaning</string>
+    </attribute>
+    <widget class="QWidget" name="gridLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1011</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLDataQualityCleaning">
+      <item row="4" column="0">
+       <widget class="QLabel" name="lOutlierDetectionHandling">
+        <property name="text">
+         <string>Outlier Detection and Handling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="3">
+       <widget class="QComboBox" name="cBDuplicateDataHandling"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="lCollinearityThreshold">
+        <property name="text">
+         <string>Collinearity Threshold:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="20" column="1" colspan="3">
+       <widget class="QProgressBar" name="pBDataCleaning">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="3">
+       <widget class="QComboBox" name="cBDataTypeConversion"/>
+      </item>
+      <item row="21" column="3">
+       <widget class="QPushButton" name="pBDataCleaningNext">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="lEnableSpatialWindowing">
+        <property name="text">
+         <string>Enable Spatial Windowing:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lDataTypeConversion">
+        <property name="text">
+         <string>Data Type Conversion:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="lReclassificationTable">
+        <property name="text">
+         <string>Reclassification Table:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="lEnableReclassification">
+        <property name="text">
+         <string>Enable Reclassification:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1" colspan="3">
+       <widget class="QComboBox" name="cBSelectClassFieldReclassification"/>
+      </item>
+      <item row="20" column="0">
+       <widget class="QLabel" name="lProgressDataCleaning">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="0">
+       <widget class="QLabel" name="lChooseFolderDataCleaningReclassificationCSVSave">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder for Reclassification:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="lChooseFolderforCleanData">
+        <property name="text">
+         <string>Choose a Folder for Clean Data:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="1" colspan="3">
+       <widget class="QPushButton" name="pBApplyReclassification">
+        <property name="text">
+         <string>Apply Reclassification</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lDuplicateDataHandling">
+        <property name="text">
+         <string>Duplicate Data Handling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QCheckBox" name="cBEnableSpatialWindowing">
+        <property name="text">
+         <string>Enable Spatial Windowing (Surrounding 8 Cells)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1" colspan="3">
+       <widget class="QTableWidget" name="tWReclassificationTable"/>
+      </item>
+      <item row="17" column="0">
+       <widget class="QLabel" name="lStandarizedClassDropdown">
+        <property name="text">
+         <string>Standardized Class Dropdowns:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QLabel" name="lApplyReclassification">
+        <property name="text">
+         <string>Apply Reclassification Button:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="2">
+       <widget class="QPushButton" name="pBSaveReclassificationResult">
+        <property name="text">
+         <string>Save Reclassification Result</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="lSelectLandUseLayerReclassification">
+        <property name="text">
+         <string>Select Land Use Layer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="1">
+       <widget class="QToolButton" name="tBChooseFolderDataCleaningReclassificationCSVSave">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lImportCSVFileDataCleaning">
+        <property name="text">
+         <string>Import CSV File:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1" colspan="3">
+       <widget class="QComboBox" name="cBCollinearityThreshold"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lMissingValueHandling">
+        <property name="text">
+         <string>Missing Value Handling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1" colspan="3">
+       <widget class="QPushButton" name="pBAutoPopulateClassesReclassification">
+        <property name="text">
+         <string>Auto-Populate Classes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="3">
+       <widget class="QComboBox" name="cBImportCSVFileDataCleaning"/>
+      </item>
+      <item row="13" column="1" colspan="3">
+       <widget class="QComboBox" name="cBSelectLandUseLayerReclassification"/>
+      </item>
+      <item row="3" column="1" colspan="3">
+       <widget class="QComboBox" name="cBMissingValueHandling"/>
+      </item>
+      <item row="17" column="1" colspan="3">
+       <widget class="QComboBox" name="cBStandarizedClassDropdown"/>
+      </item>
+      <item row="7" column="1" colspan="3">
+       <widget class="QComboBox" name="cBDataNormalization"/>
+      </item>
+      <item row="16" column="0">
+       <widget class="QLabel" name="lAutoPopulateClassesReclassification">
+        <property name="text">
+         <string>Auto-Populate Classes Button:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QListView" name="lVTargetColumnsDataCleaning">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QCheckBox" name="cBEnableReclassification">
+        <property name="text">
+         <string>Enable Reclassification</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="lSelectClassFieldReclassification">
+        <property name="text">
+         <string>Select Class Field:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lDataCleaning">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Data Cleaning:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lDataNormaliztion">
+        <property name="text">
+         <string>Data Normalization:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QToolButton" name="tBSaveCleanData">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QCheckBox" name="cBEnableDataCleaning">
+        <property name="text">
+         <string>Enable Data Cleaning</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="lLandUseReclassification">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Land Use Reclassification:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="3">
+       <widget class="QComboBox" name="cBOutlierDetection"/>
+      </item>
+      <item row="10" column="3">
+       <widget class="QPushButton" name="pBSaveCleanDataCSV">
+        <property name="text">
+         <string>Save Clean Data</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lTargetColumnsDataCleaning">
+        <property name="text">
+         <string>Target Columns:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="3">
+       <widget class="QPushButton" name="pBRefreshLayersofReclassification">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QCheckBox" name="cBEnableSpatialWindowingWholeBlock">
+        <property name="text">
+         <string>Enable Spatial Windowing Whole block</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tTimeSeriesAnalysis">
+    <attribute name="title">
+     <string>Time Series Analysis</string>
+    </attribute>
+    <widget class="QScrollArea" name="sATimeSeries">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>1021</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="sAWCTimeSeries">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>998</width>
+        <height>2007</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="wTimeSeries" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="lTemporalDataSelectionandFilteringTimeSeries">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Data Selection &amp; Filtering:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lDatasetTimeSeries">
+            <property name="text">
+             <string>Select Input Time-Series CSV Layer:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBDatasetTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBRefreshLayersTimeseries">
+            <property name="text">
+             <string>Refresh Layers</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lValueFieldSelectorTimeSeries">
+            <property name="text">
+             <string>Value Field Selector:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="lWValueFieldSelectorTimeSeries">
+            <property name="selectionMode">
+             <enum>QAbstractItemView::MultiSelection</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lLoadDataTimeSeries">
+            <property name="text">
+             <string>Load Data:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBLoadDataTimeSeries">
+            <property name="text">
+             <string>Load Data</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lSelectTimeSeriesColumns">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Select Time-Series Columns:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTimeSeriesTargets">
+            <property name="text">
+             <string>Time Series Targets:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="lWTimeSeriesTargets">
+            <property name="selectionMode">
+             <enum>QAbstractItemView::MultiSelection</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTimeColumnSelection">
+            <property name="text">
+             <string>Time Column Selection:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBTimeColumnSelection"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lVisualizationTimeSeries">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Visualization:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lVisualizationTypeTimeSeries">
+            <property name="text">
+             <string>Visualization Type:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rBLineChart">
+            <property name="text">
+             <string>Line Chart</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rBBoxPlot">
+            <property name="text">
+             <string>Box Plot</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lChoosePlotType">
+            <property name="text">
+             <string>Choose plot types:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rBRawData">
+            <property name="text">
+             <string>Raw Data</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rBSeasonalTrends">
+            <property name="text">
+             <string>seasonal-trends</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rBAnomalies">
+            <property name="text">
+             <string>Anomalies</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lPlotTimeSeries">
+            <property name="text">
+             <string>Plot Time Series:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBExportPlotTimeSeries">
+            <property name="text">
+             <string>Export Plot</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTemporalAggregationTimeSeries">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Temporal Aggregation:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lAggregationIntervalTimeSeries">
+            <property name="text">
+             <string>Aggregation Interval:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBAggregationIntervalTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lAggregationMethodTimeSeries">
+            <property name="text">
+             <string>Aggregation Method:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBAggregationMethodTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lAggregateTimeSeries">
+            <property name="text">
+             <string>Aggregate:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBAggregateTimeSeries">
+            <property name="text">
+             <string>Aggregate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTrendandSeasonalityDetection">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Trend &amp; Seasonality Detection:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lLOESSSeasonalTrendDecomposition">
+            <property name="text">
+             <string>Enable Seasonal-Trend decomposition using LOESS:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cBEnalblesLOESSSeasonalTrendDecomposition">
+            <property name="text">
+             <string>Enables Seasonal-Trend decomposition using LOESS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBDecomposeTimeSeries">
+            <property name="text">
+             <string>Decompose Time Series</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lCorrelationWithLandUse">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Correlation with Land Use Over Time:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lPollutantTimeSeriesColumn">
+            <property name="text">
+             <string>Pollutant Time Series Column:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBPollutantTimeSeriesColumn"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lLandUseFractionColumn">
+            <property name="text">
+             <string>Land Use Fraction Column:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="lWLandUseFractionColumn">
+            <property name="selectionMode">
+             <enum>QAbstractItemView::MultiSelection</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lCorrelationMethodTimeSeries">
+            <property name="text">
+             <string>Correlation Method:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBCorrelationMethodTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lRunCorrelationTimeSeries">
+            <property name="text">
+             <string>Run Correlation:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBRunCorrelationTimeSeries">
+            <property name="text">
+             <string>Run Correlation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lExportTimeSeriesResults">
+            <property name="text">
+             <string>Export Time Series Results:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lChooseExportFolderTimeSeries">
+            <property name="text">
+             <string>Choose Folder ExportTime Series:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="tBChooseExportFolderTimeSeries">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBExportTimeSeriesResults">
+            <property name="text">
+             <string>Export Time Series Results</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lSpatialTargetsFromTimeSeries">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Spatial Targets from Time-Series:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lPollutantMetricsCalculationsTimeSeries">
+            <property name="text">
+             <string>Pollutant Column Metrics Calculations Time Series:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBPollutantMetricsCalculationsTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTimestampMetricsCalculationsTimeSeries">
+            <property name="text">
+             <string>Timestamp Column Metrics Calculations Time Series:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cBTimestampMetricsCalculationsTimeSeries"/>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cBFSpatialTargetsTimeSeries">
+            <property name="text">
+             <string>Compute Frequency (f)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cBISpatialTargetsTimesSeries">
+            <property name="text">
+             <string>Compute Intensity (I)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cBESpatialTargestsTimeSeries">
+            <property name="text">
+             <string>Compute Exposure (Ex)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lTemporalScope">
+            <property name="text">
+             <string>Select Temporal Scope:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="lWTemporalScope">
+            <property name="selectionMode">
+             <enum>QAbstractItemView::MultiSelection</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lPollutantThreshold">
+            <property name="text">
+             <string>Pollutant Threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lEPollutantThreshold"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBComputeSpatialTargets">
+            <property name="text">
+             <string>Compute Spatial Targets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lProgressBarTimeSeriesAnalysis">
+            <property name="text">
+             <string>Progress:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="pBTimeSeriesAnalysis">
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pBNextTimeSeries">
+            <property name="text">
+             <string>Next</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tSpatialMetricsAggregation">
+    <attribute name="title">
+     <string>Spatial Metrics Aggregation</string>
+    </attribute>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QScrollArea" name="sASpatialMetricsAggregation">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="sACSpatialMetricsAggrigation">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>697</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QScrollArea" name="sASpetialMetrics">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>956</width>
+              <height>1614</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QWidget" name="wSpatialMetericsAggregation" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QLabel" name="lRefinedDataCSV">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Refined CSV Data:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSelectRefinedCSVLayer">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Refined CSV Layer:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBSelectRefinedCSVLayer">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBRefreshLayersSpatialMetricsAggregation">
+                  <property name="text">
+                   <string>Refresh Layers</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSelectFieldsFromCSV">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Variables:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lFieldSelection">
+                  <property name="text">
+                   <string>Field Selection:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="lWFieldSelection">
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::MultiSelection</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lChooseFolderDataTargeting">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Choose a Folder:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tBChooseFolderDataTargeting">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBDataTargetingSave">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lAggregationOverTimeorSpace">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Aggregation Over Time or Space:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cBEnableAggregateOverTimeorSpace">
+                  <property name="text">
+                   <string>Enable</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rBAggregateByTime">
+                  <property name="text">
+                   <string>Aggregate By Time</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rBAggregateBySpatialUnit">
+                  <property name="text">
+                   <string>Aggregate By Spatial Unit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lAggregationFunction">
+                  <property name="text">
+                   <string>Aggregation Function:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBAggregationFunction"/>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cBEnableUrbanSubset">
+                  <property name="text">
+                   <string>Enable Urban Subset (&gt;25% built-up)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBAggregateOverTimeorSpace">
+                  <property name="text">
+                   <string>Aggregate</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lComputeMetrics">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Compute Metrics:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lFrequencyAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Frequency Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSelectCSVLayerforFrequencyAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Layer for Frequency Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBSelectCSVLayerforFrequencyAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lThresholdLevelFrequencyAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Threshold Level:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="sBThresholdLevelFrequencyAnalysis"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lChooseFolderFrequencyAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Choose a Folder:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tBChooseFolderFrequencyAnalysis">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBFrequencyAnalysisSave">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lIntensityAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Intensity Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSelectCSVLayerforIntensityAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Layer for Intensity Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBSelectCSVLayerforIntensityAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lIntensityMetricsIntensityAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Intensity Metrics:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBIntensityMetricsIntensityAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lChooseFolderIntensityAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Choose a Folder:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tBChooseFolderIntensityAnalysis">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBSaveIntensityAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lExposureAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Exposure Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSelectCSVLayerforExposureAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Layer for Exposure Analysis:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBSelectCSVLayerforExposureAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lPopulationDatasetExposureAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Population Dataset:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBPopulationDatasetExposureAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lMethodofEstimationExposureAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Method of Estimation:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBMethodofEstimationExposureAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lChooseFolderExposureAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Choose a Folder:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tBChooseFolderExposureAnalysis">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBSaveExposureAnalysis">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lFeatureSelectionbyCorrelation">
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Feature Selection by Correlation:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cBEnableFeatureSelectionByCorrelation">
+                  <property name="text">
+                   <string>Enable</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lTargetVariableFeatureSelection">
+                  <property name="text">
+                   <string>Target Variable Feature Selection:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cBTargetVariableFeatureSelection"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lSpearmanThreshold">
+                  <property name="text">
+                   <string>Spearman Threshold:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="dSBSpearmanThreshold"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBRunFeatureSelection">
+                  <property name="text">
+                   <string>Run Feature Selection</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lProgressCSVDataAnalysis">
+                  <property name="font">
+                   <font>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Progress:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QProgressBar" name="pBCSVDataAnalysis">
+                  <property name="value">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pBCSVDataAnalysisNext">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Next</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tSpatialAnalysis">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Spatial Analysis</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>1001</width>
+       <height>577</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLSpatialAnalysis">
+      <item row="9" column="2">
+       <widget class="QDoubleSpinBox" name="dSBCollinearityThresholdMGWR"/>
+      </item>
+      <item row="16" column="1" colspan="4">
+       <widget class="QProgressBar" name="pBSpatialFiltering">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2">
+       <widget class="QDoubleSpinBox" name="dSBInitialBandwidthMGWR">
+        <property name="maximum">
+         <double>100000.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1" colspan="4">
+       <widget class="QComboBox" name="cBKernelTypeMGWR">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="lCollinearityThresholdMGWR">
+        <property name="text">
+         <string>Collinearity Threshold MGWR:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1" colspan="4">
+       <widget class="QListWidget" name="lWExplanatoryVarsMGWR">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lYCoordMGWR">
+        <property name="text">
+         <string>Y Coordinate MGWR:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lXCoordMGWR">
+        <property name="text">
+         <string>X Coordinate MGWR:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="1" colspan="4">
+       <widget class="QComboBox" name="cBBandwidthSelectionMethod">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="lBandwidthSelectionMethod">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Bandwidth Selection Method:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="lInitialBandwidthMGWR">
+        <property name="text">
+         <string>Initial Bandwidth MGWR (meters):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="4">
+       <widget class="QPushButton" name="pBSpatialFilteringNext">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QCheckBox" name="cBRemoveCollinearAttributes">
+        <property name="text">
+         <string>Remove</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QLabel" name="lProgressSpatialFiltering">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0">
+       <widget class="QLabel" name="lChooseFolderSpatialFilteringMGWR">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lExplanatoryVariables">
+        <property name="text">
+         <string>Explanatory Variables:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="3">
+       <widget class="QPushButton" name="pBSpatialFilteringSaveMGWR">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="1">
+       <widget class="QToolButton" name="tBChooseFolderSpatialFilteringMGWR">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="4">
+       <widget class="QComboBox" name="cBXCoordMGWR"/>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="lMGWR">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>(MGWR) Multiscale Geographically Weighted Regression:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="lMGWRConfiguration">
+        <property name="text">
+         <string>MGWR Configuration:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lCoordinateColumnsSelectionMGWR">
+        <property name="text">
+         <string>Coordinate Columns Selection:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="4">
+       <widget class="QComboBox" name="cBTargetVariableMGWR"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lSelectCSVLayerforMGWR">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Select CSV for MGWR:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="4">
+       <widget class="QComboBox" name="cBSelectCSVLayerforMGWR">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="lRemoveCollinearAttributes">
+        <property name="text">
+         <string>Remove Collinear Attributes:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="lKernelTypeMGWR">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Kernel Type MGWR:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="4">
+       <widget class="QComboBox" name="cBYCoordMGWR"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lTargetVariableMGWR">
+        <property name="text">
+         <string>Target Variable:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pBRefreshLayersMGWR">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tPredictiveModeling">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Predictive Modeling</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>1001</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLPredictiveModeling">
+      <item row="16" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lXGNumberofBoostingRounds">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Boosting Rounds:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QCheckBox" name="cBEnableBinaryClassification">
+        <property name="text">
+         <string>Enable</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="0">
+       <widget class="QLabel" name="lProgressPredictiveModeling">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1" colspan="3">
+       <widget class="QLineEdit" name="lERFMaximumDepthofTrees"/>
+      </item>
+      <item row="11" column="1" colspan="3">
+       <widget class="QLineEdit" name="lERFNumberofTrees"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QDoubleSpinBox" name="dSBThresholdEX"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="lFeatureVariablesModeling">
+        <property name="text">
+         <string>Feature Variables Modeling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="23" column="2">
+       <widget class="QPushButton" name="pBPredictiveModelingSaveRFXG">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lDefineTargetVariable">
+        <property name="text">
+         <string>Define Target Variable:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="dSBThresholdF"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lThresholdF">
+        <property name="text">
+         <string>Threshold F:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="1">
+       <widget class="QRadioButton" name="rBTrainTestSplit">
+        <property name="text">
+         <string>Train/Test Split</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDoubleSpinBox" name="dSBThresholdI"/>
+      </item>
+      <item row="13" column="0" colspan="4" alignment="Qt::AlignLeft">
+       <widget class="QRadioButton" name="rBXGBoost">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>XGBoost:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="lThresholdEX">
+        <property name="text">
+         <string>Threshold EX:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="19" column="0">
+       <widget class="QLabel" name="lTrainTestSplit">
+        <property name="text">
+         <string>Train Test Split:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="20" column="3">
+       <widget class="QPushButton" name="pBRunModeling">
+        <property name="text">
+         <string>Run Modeling</string>
+        </property>
+       </widget>
+      </item>
+      <item row="23" column="1">
+       <widget class="QToolButton" name="tBChooseFolderPredictiveModelingRFXG">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1" colspan="3">
+       <widget class="QLineEdit" name="lEXGLearningRate"/>
+      </item>
+      <item row="18" column="1">
+       <widget class="QRadioButton" name="rBEnableCrossValidation">
+        <property name="text">
+         <string>Enables 10-fold cross-validation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QComboBox" name="cBTargetVariableModeling"/>
+      </item>
+      <item row="23" column="3">
+       <widget class="QPushButton" name="pBPredictiveModelingNext">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Next.svg</normaloff>Icons/Next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="23" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lChooseFolderPredictiveModelingRFXG">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="1">
+       <widget class="QProgressBar" name="pBPredictiveModeling">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="lEnableMGWRFeatures">
+        <property name="text">
+         <string>Enable MGWR Features:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QLabel" name="lEnableCrossValidation">
+        <property name="text">
+         <string>Enables 10-fold cross-validation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lXGLearningRate">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Learning Rate:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="lEnableBinaryClassification">
+        <property name="text">
+         <string>Enable Binary Classification:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRFNumberofTrees">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Number of Trees:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="3">
+       <widget class="QComboBox" name="cBInputDataPredictiveModeling"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QCheckBox" name="cBEnableMGWRFeatures">
+        <property name="text">
+         <string>Enable</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0">
+       <widget class="QLabel" name="lModelEvaluationMethod">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Model Evaluation Method:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRFMaximumDepthofTrees">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Maximum Depth of Trees:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1" colspan="3">
+       <widget class="QLineEdit" name="lEXGNumberofBoostingRounds"/>
+      </item>
+      <item row="9" column="0" colspan="4" alignment="Qt::AlignLeft">
+       <widget class="QRadioButton" name="rBRF">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>(RF) Random Forest:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lInputDataPredictiveModeling">
+        <property name="text">
+         <string>Input Data Predictive Modeling:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lThresholdI">
+        <property name="text">
+         <string>Threshold I:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1" colspan="3">
+       <widget class="QListWidget" name="lWFeatureVariablesModeling">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="bPRefreshLayersPredictiveModeling">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tInterpretResults">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Interpret Results</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1001</width>
+       <height>656</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gLInterpretResults">
+      <item row="14" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lChooseFolderStatisticalAnalysisSHAPLIME">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lLIMEFeatureSubset">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Feature Subset:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lLoadTrainedModelandData">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Load Trained Model and Data:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lInputCSVForInterpretation">
+        <property name="text">
+         <string>Input CSV For Interpretation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lLIMEModelSelection">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Model Selection:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lSHAPVisualizationType">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Visualization Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="4">
+       <widget class="QPushButton" name="pBStatisticalAnalysisSaveSHAPLIME">
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="4">
+       <widget class="QComboBox" name="cBInputCSVForInterpretation"/>
+      </item>
+      <item row="24" column="4">
+       <widget class="QPushButton" name="pBStatisticalAnalysisCancel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Cancel.svg</normaloff>Icons/Cancel.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="5" alignment="Qt::AlignLeft">
+       <widget class="QRadioButton" name="rBLIME">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>(LIME) Local Interpretable Model-agnostic Explanations:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pBRefreshLayersInterpretResults">
+        <property name="text">
+         <string>Refresh Layers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0">
+       <widget class="QLabel" name="lSelectCSVLayerforRSAnalysis">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Select Layer for Rank-Sum Analysis:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="1" colspan="4">
+       <widget class="QComboBox" name="cBRSUParameters">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="1" colspan="4">
+       <widget class="QComboBox" name="cBLIMEVisualizationType">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="20" column="1" colspan="4">
+       <widget class="QComboBox" name="cBRSUVariableSelection">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="5" alignment="Qt::AlignLeft">
+       <widget class="QRadioButton" name="rBSHAP">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>(SHAP) SHapley Additive exPlanations:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1" colspan="4">
+       <widget class="QComboBox" name="cBSHAPVisualizationType">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="24" column="3">
+       <widget class="QPushButton" name="pBStatisticalAnalysisSaveRankSum">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Icons/Save.svg</normaloff>Icons/Save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0" colspan="5" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRankSumAnalysis">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Rank-Sum Analysis:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="4">
+       <widget class="QComboBox" name="cBTrainedModelInterpretation"/>
+      </item>
+      <item row="23" column="1" colspan="4">
+       <widget class="QProgressBar" name="pBStatisticalAnalysis">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lTrainedModelInterpretation">
+        <property name="text">
+         <string>Trained Model Interpretation:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="23" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lProgressStatisticalAnalysis">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Progress:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRSUVisualizationType">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Visualization Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1" colspan="4">
+       <widget class="QComboBox" name="cBLIMEFeatureSubset">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1" colspan="4">
+       <widget class="QComboBox" name="cBLIMEModelSelection">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="24" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lChooseFolderStatisticalAnalysisRankSum">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose a Folder:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="20" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRSUVariableSelection">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Variable Selection:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2">
+       <widget class="QToolButton" name="tBChooseFolderStatisticalAnalysisSHAPLIME">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="1" colspan="4">
+       <widget class="QComboBox" name="cBSelectCSVLayerforRSAnalysis">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lRSUParameters">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>RSU Parameters:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="24" column="2">
+       <widget class="QToolButton" name="tBChooseFolderStatisticalAnalysisRankSum">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lSHAPModelSelection">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Model Selection:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1" colspan="4">
+       <widget class="QComboBox" name="cBSHAPModelSelection">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="lLIMEVisualizationType">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Visualization Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="1" colspan="4">
+       <widget class="QComboBox" name="cBRSUVisualizationType">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="4">
+       <widget class="QListWidget" name="lWFeatureColumnsSHAP">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lFeatureColumnsSHAP">
+        <property name="text">
+         <string>Feature Columns for SHAP Analysis:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tLog">
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>850</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1000</width>
+      <height>750</height>
+     </size>
+    </property>
+    <attribute name="title">
+     <string>Log</string>
+    </attribute>
+    <widget class="QWidget" name="wLog" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>1001</width>
+       <height>671</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="layoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>981</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gLLog">
+       <item row="0" column="0">
+        <widget class="QTextEdit" name="tELog"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pBSaveLog">
+         <property name="text">
+          <string>Save Log</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icons/SaveLog.svg</normaloff>Icons/SaveLog.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pBCopyLog">
+         <property name="text">
+          <string>Copy Log</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icons/CopyLog.svg</normaloff>Icons/CopyLog.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="pBClearLog">
+         <property name="text">
+          <string>Clear Log</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Icons/ClearLog.svg</normaloff>Icons/ClearLog.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
