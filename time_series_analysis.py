@@ -5,6 +5,8 @@ import logging
 import numpy as np
 import pandas as pd
 from datetime import datetime
+
+from sklearn import base
 from statsmodels.tsa.seasonal import seasonal_decompose
 from scipy.stats import zscore, pearsonr, spearmanr, kendalltau, entropy
 from matplotlib import pyplot as plt
@@ -993,22 +995,31 @@ class TimeSeriesAnalysis:
         """
         Auto-detect normalization for column `tp`.
         Priority:
-          1) Explicit indicator columns (case-insensitive):
-             - `<tp>_norm_method`, `norm_method`, `normalization_method`,
-               `scaling_method`, `scaler`, `<tp>_scaler`
-             Accepted values: minmax, min-max, z, zscore, z-score, standard,
-             standardize, raw, none
-          2) Companion stats columns:
-             - Min–max if both `<tp>_orig_min` and `<tp>_orig_max` exist
-             - Z-score if both `<tp>_orig_mean` and `<tp>_orig_std` exist
-          3) Heuristics on distribution:
-             - Min–max if values ~[0,1]
-             - Z-score if mean≈0, std≈1, values within ~[-6,6]
-          4) Otherwise → 'raw'
+        1) Explicit indicator columns (case-insensitive):
+            - `<tp>_norm_method`, `norm_method`, `normalization_method`,
+            `scaling_method`, `scaler`, `<tp>_scaler`
+            Accepted values: minmax, min-max, z, zscore, z-score, standard,
+            standardize, raw, none
+        2) Companion stats columns:
+            - Min–max if both `<tp>_orig_min` and `<tp>_orig_max` exist
+            - Z-score if both `<tp>_orig_mean` and `<tp>_orig_std` exist
+        3) Heuristics on distribution:
+            - Min–max if values ~[0,1]
+            - Z-score if mean≈0, std≈1, values within ~[-6,6]
+        4) Otherwise → 'raw'
         Returns: (method, params_dict)
         """
         import pandas as pd
         import numpy as np
+
+        # --- FORCE RAW FOR SPECIFIC COLUMNS ---
+        # Add any columns that should never be converted
+        force_raw_columns = [
+            'DN_interp',
+            'DN_interp_cleaned_minmax_windowed_cleaned'   # <-- add your column here
+        ]
+        if tp in force_raw_columns:
+            return 'raw', {}
 
         # 1) Explicit indicator columns
         indicator_cols = [
@@ -1079,10 +1090,19 @@ class TimeSeriesAnalysis:
             # Try stripping common normalization suffixes to locate a raw companion
             suffixes = ['_minmax','_zscore','_z','_standard','_standardized','_normalized','_norm','_scaled']
             base = tp
-            for suf in suffixes:
-                if base.endswith(suf):
-                    base = base[: -len(suf)]
+
+            changed = True
+            while changed:
+                changed = False
+                for suf in suffixes:
+                    if base.endswith(suf):
+                        base = base[:-len(suf)]
+                        changed = True
+                        break
+                    if base in df.columns:
+                        return pd.to_numeric(df[base], errors="coerce"), base
             # If base exists and is numeric, use it
+
             if base in df.columns and pd.api.types.is_numeric_dtype(df[base]):
                 return pd.to_numeric(df[base], errors='coerce'), base
 
@@ -1189,7 +1209,7 @@ class TimeSeriesAnalysis:
             QgsFields, QgsField, QgsFeature, QgsGeometry, QgsPointXY,
             QgsVectorFileWriter, QgsVectorLayer, QgsWkbTypes, QgsProject
         )
-        from PyQt5.QtWidgets import QFileDialog
+        from PyQt5.QtWidgets import QFileDialog, QInputDialog
         from PyQt5.QtCore import QVariant
         import numpy as np
         from scipy.stats import entropy
@@ -1295,9 +1315,47 @@ class TimeSeriesAnalysis:
                 self.log(f"ERROR: Pollutant column '{tp}' not found.")
                 return
 
+            # --- NEW: Popup to select raw column if the selected one seems normalized ---
+            normalized_indicators = ['minmax', 'normalized', 'windowed', 'scaled', 'zscore', 'standard']
+            if any(ind in tp.lower() for ind in normalized_indicators):
+                # Find candidate raw columns: numeric columns that are not obviously normalized
+                candidate_cols = [col for col in df_filtered.columns 
+                                if pd.api.types.is_numeric_dtype(df_filtered[col]) 
+                                and not any(ind in col.lower() for ind in normalized_indicators)]
+                # Prefer columns with 'DN_interp' in name (raw pollutant)
+                dn_cols = [col for col in candidate_cols if 'dn_interp' in col.lower()]
+                if dn_cols:
+                    candidate_cols = dn_cols + [c for c in candidate_cols if c not in dn_cols]
+                if candidate_cols:
+                    selected, ok = QInputDialog.getItem(self.dialog, 
+                                                        "Select Raw Pollutant Column", 
+                                                        "The selected pollutant column appears to be normalized.\n"
+                                                        "Please select a raw (non‑normalized) column to use for threshold calculation:", 
+                                                        candidate_cols, 0, False)
+                    if ok and selected:
+                        tp = selected
+                        self.log(f"User switched to raw column: {tp}")
+                    else:
+                        self.warn("User did not select a raw column. Continuing with normalized column may yield zero above‑threshold.")
+                else:
+                    self.warn("No raw numeric columns found. Continuing with normalized column.")
+
             # Convert integer threshold to the column's scale if needed
             threshold_for_compare = self._convert_integer_threshold_to_column_scale(df_filtered, tp, threshold_int)
+            self.log(f"Original threshold : {threshold_int}")
+            self.log(f"Converted threshold: {threshold_for_compare}")
 
+            self.log(
+                f"Pollutant statistics:"
+                f" min={df_filtered[tp].min()},"
+                f" max={df_filtered[tp].max()},"
+                f" mean={df_filtered[tp].mean()}"
+            )
+
+            self.log(
+                f"Rows above threshold = "
+                f"{(pd.to_numeric(df_filtered[tp], errors='coerce') >= threshold_for_compare).sum()}"
+            )
             # Ensure fid column exists
             if 'fid' not in df_filtered.columns:
                 df_filtered['fid'] = range(len(df_filtered))
@@ -1305,7 +1363,7 @@ class TimeSeriesAnalysis:
 
             # Validate coordinates before processing
             df_coords_valid = df_filtered[(df_filtered[x_col].notna()) & (df_filtered[y_col].notna()) & 
-                               (np.isfinite(df_filtered[x_col])) & (np.isfinite(df_filtered[y_col]))]
+                            (np.isfinite(df_filtered[x_col])) & (np.isfinite(df_filtered[y_col]))]
             self.log(f"Valid coordinate pairs: {len(df_coords_valid)} out of {len(df_filtered)}")
 
             if len(df_coords_valid) == 0:
